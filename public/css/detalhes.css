@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  margin: 2rem 2rem;
+}
+
+header nav ul {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+section.content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2rem 2rem;
+  padding: 1rem;
+  border: 1px solid black;
+}
+
+section.content div.cards {
+  display: flex;
+  flex-direction: column;
+  width: 27%;
+  margin: 1rem 0;
+  text-align: center;
+  box-shadow: 5px 3px 5px 3px #11101040;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+section.content div.cards img {
+  height: 50%;
+  padding: 0.5rem;
+}
+
+section.content div.cards h2 {
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem 0;
+}
+
+section.content div.cards p {
+  display: flex;
+  justify-content: center;
+  margin: 0.6rem 0.3rem;
+}
+
+@media screen and (max-width: 500px) {
+  .cards {
+    font-size: 0.7rem;
+  }
+}

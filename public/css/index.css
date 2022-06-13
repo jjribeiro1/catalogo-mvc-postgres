@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  margin: 2rem 2rem;
+}
+
+header nav ul {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+h1 {
+  text-align: center;
+}
+
+section.content {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 2rem 2rem;
+  padding: 1rem;
+}
+
+section.content div.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 27%;
+  margin: 1rem 0;
+  text-align: center;
+  box-shadow: 5px 3px 5px 3px #11101040;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cards:hover {
+  transform: scale(1.1);
+}
+
+section.content div.cards img {
+  padding: 0.5rem;
+  height: 70%;
+}
+
+section.content div.cards h2 {
+  display: flex;
+  justify-content: center;
+}
+
+section.content div.cards a#editar {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  border: 1px solid rgb(0, 0, 0);
+  color: #fff;
+  background-color: rgb(37, 36, 36);
+  text-decoration: none;
+}
+
+section.content div.cards a#deletar {
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  border: 1px solid rgb(0, 0, 0);
+  color: #fff;
+  background-color: rgb(37, 36, 36);
+  text-decoration: none;
+}
+
+/* estilização modal put  */
+
+.modal-overlay {
+  background-color: #00000050;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal {
+  margin: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  padding: 1rem;
+  color: #fff;
+}
+
+.modal-header h3 {
+  color: #fff;
+  background-color: black;
+}
+
+.modal-header a#close-modal-put {
+  font-size: 1.4rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.modal-body {
+  padding: 0.5rem 1rem;
+  flex: 1;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+}
+
+.form-modal {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-modal input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  outline: none;
+  border: solid 2px #ccc;
+}
+
+.form-modal label {
+  color: rgb(112, 112, 112);
+  padding-top: 0.5rem;
+}
+
+.form-modal button {
+  padding: 0.6rem;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  background-color: rgb(255, 255, 255);
+  color: #000000;
+  border: solid 1px #000000;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-modal button:hover {
+  background-color: #000000;
+  color: #fff;
+}
+
+.modal-body p {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+/* estilização modalDel */
+
+div#btns-del {
+  display: flex;
+  margin: 0 auto;
+}
+
+div#btns-del a {
+  padding: 0.7rem;
+  text-decoration: none;
+  width: 100%;
+  margin: 2rem 1rem 1rem;
+  border-radius: 3px;
+}
+
+div#btns-del a#no {
+  color: #010101;
+  background-color: rgb(255, 255, 255);
+  border: solid 1px #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+div#btns-del a#no:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+div#btns-del a#yes {
+  color: #000000;
+  background-color: rgba(255, 255, 255);
+  border: solid 1px #000000;
+  transition: all 0.3s ease-in-out;
+}
+
+div#btns-del a#yes:hover {
+  color: #fff;
+  background-color: #000000;
+}
+
+/* estilização message */
+
+.message {
+  position: absolute;
+  top: 7rem;
+  right: 2rem;
+  z-index: 99999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 25rem;
+  padding: 1.2rem;
+  font-weight: 600;
+  border-radius: 3px;
+  background-color: black;
+  color: white;
+}
+
+.message p {
+  color: white;
+  background-color: black;
+}
+
+@media screen and (max-width: 700px) {
+  .cards {
+    font-size: 0.8rem;
+  }
+
+  .cards h2 {
+    font-size: 0.7rem;
+  }
+}

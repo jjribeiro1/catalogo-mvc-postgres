@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/css/detalhes.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+       <%- include('./components/nav') %>
+      </nav>
+    </header>
+    <main>
+      <section class="content">
+        <% listaCarros.forEach((carro) => { %>
+        <div class="cards">
+          <img src="<%= carro.imagem %>" alt="" />
+
+          <h2><%= carro.nome %></h2>
+
+          <p>Carroceria: <%= carro.carroceria %></p>
+          <p>Câmbio: <%= carro.cambio %></p>
+          <p>Ano: <%= carro.ano %></p>
+          <p>Velocidade Máxima: <%= carro.velocidade %> km/h</p>
+        </div>
+        <% }) %>
+      </section>
+    </main>
+  </body>
+</html>

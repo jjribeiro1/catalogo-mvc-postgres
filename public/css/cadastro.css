@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: montserrat;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+header {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  margin: 2rem 2rem;
+}
+
+header nav ul {
+  border: 1px solid rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+/* estilização form  */
+
+section#cadastro {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 5rem;
+}
+
+section#cadastro h2 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section#cadastro form input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.3rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+}
+
+section#cadastro form button#btnCadastrar {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.6rem;
+  font-size: 1rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border: solid 1px rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+section#cadastro form button#btnAtualizar {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  padding: 0.6rem;
+  width: 10%;
+  font-size: 1rem;
+  background-color: rgb(0, 0, 0);
+  color: #fff;
+  border: solid 1px rgb(0, 0, 0);
+  cursor: pointer;
+}

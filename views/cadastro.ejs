@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo</title>
+    <link rel="stylesheet" href="/css/cadastro.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <%- include('./components/nav') %>
+        </nav>
+      </header>
+
+      <main>
+        <section id="cadastro">
+
+          <% if(message != "") { %>
+            <section class="message">
+              <p><%= message %></p>
+              <i id="close-message" class="bi bi-x"></i>
+          </section>
+        <% } %>
+          
+          <h2> NOVO CARRO</h2>
+            <form action="/new" method="POST">
+
+              <label for="imagem" id="imagem" name="imagem">Imagem</label>
+              <input type="text" id="imagem" name = "imagem" required> 
+
+              <label for="nome" id="nome" name="nome">Nome</label>
+              <input type="text" id="nome" name = "nome" required>
+
+              <label for="carroceria" id="carroceria" name="carroceria" name="carroceria">Carroceria</label>
+              <input type="text" id="carroceria" name = "carroceria" required>
+
+              <label for="cambio" id="cambio" name="cambio">Câmbio</label>
+              <input type="text" id="cambio" name = "cambio" required>
+
+              <label for="ano" id="ano" name="ano">Ano</label>
+              <input type="text" id="ano" name = "ano" required> 
+
+              <label for="velocidade" id="velocidade" name="velocidade">Velocidade Máxima</label>
+              <input type="text" id="velocidade" name = "velocidade" required> 
+
+              <button type="submit" id="btnCadastrar"> Cadastrar</button>
+            </form>
+              
+         <script src="/js/script.js"></script>     
+</body>
+</html>
